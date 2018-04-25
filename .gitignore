@@ -4,5 +4,6 @@ yarn-error.log
 1.psd
 package-lock.json
 dest/
+src/img-before/
 src/img/background.jpg
 src/img/background-opacity.jpg
