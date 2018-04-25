@@ -1,0 +1,371 @@
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+}
+
+html {
+    background: url("../img/masteralb_background.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+/************BASE STYLE*************/
+a {
+    text-decoration: none;
+    color: white;
+}
+/************END BASE STYLE*************/
+
+/************HEADER*******************/
+.header {
+    @at-root &__logo-container {
+        width: 100%;
+        text-align: center;
+        opacity: .4;
+        margin: 2rem auto;
+    }
+    @at-root &__logo {
+        width: 80%;
+    }
+}
+/************END HEADER***************/
+/************LEFT SIDE****************/
+.left-side, .right-side {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 1rem 0;
+}
+/************REGISTER-FORM****************/
+.section {
+    width: 70%;
+    @at-root &__title {
+        font-size: 2rem;
+        text-align: center;
+        padding: 1rem 0;
+        color: #fff;
+    }
+}
+
+.form-wrapper {
+    background: rgba($color: #000000, $alpha: .2);
+    padding: 1rem;
+    border-radius: .2rem;
+}
+.form {
+    background: #fff;
+    padding: 1rem;
+    border-radius: .2rem;
+    @at-root &__box {
+        width: 100%;
+        margin-bottom: 1rem;
+        position: relative;
+        @at-root &:last-child {
+            margin-bottom: 0;
+        }
+        @at-root &--checkbox {
+            color: #dedede;
+        }
+    }
+    @at-root .register_button {
+        display: block;
+        border: none;
+        background-color: #93d02b;
+        color: #fff;
+        padding: .5rem;
+        width: 100%;
+        font-size: 1.4rem;
+        border-radius: .2rem;
+        cursor: pointer;
+        @at-root &:hover {
+            background: darken($color: #93d02b, $amount: 10);
+        }
+    }
+    @at-root &__input {
+        width: 100%;
+        padding: .3rem;
+        font-size: 1.2rem;
+        padding-left: 3rem;
+        border: 1px solid #dedede;
+        border-radius: .2rem;
+        color: #dedede;
+        @at-root &::-webkit-input-placeholder{
+            color: #dedede;
+        }
+    }
+    @at-root &__icon {
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        text-align: center;
+        color: #dedede;
+        font-size: 1.2rem;
+        position: absolute;
+        left: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 5px 5px 5px 0;
+        border-right: 1px solid #dedede;
+    }
+    @at-root select[selected] {
+        color: #93d02b;
+    }
+    @at-root &__option {
+        // color: #dedede;
+        font-size: 1.4rem;
+    }
+
+}
+
+.checkbox { 
+    position: relative;
+    cursor: pointer;
+    @at-root &__input {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        vertical-align: text-bottom;
+        background: #f4f4f4;
+        cursor: pointer;
+        position: relative;
+        border-radius: .2rem;
+        border: 1px solid #dedede;
+        @at-root &::after {
+            content: '';
+        }
+        @at-root &.click::after {
+            border-radius: .2rem;
+            display: block;
+            height: 9px;
+            width: 9px;
+            background: #93d02b;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all .3s linear;
+        }
+        @at-root &--focus {
+            outline: rgb(77, 144, 254) auto 5px;
+        }
+    }
+    @at-root &__label {
+        font-size: 1.2rem;
+        color: #dedede;
+        cursor: pointer;
+        padding-left: 1rem;
+    }
+    @at-root &__input-hidden {
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: none;
+        // z-index: -1;
+    }
+}
+/************END REGISTER-FORM****************/
+
+/************EMAIL-FORM****************/
+
+.form__input--textarea {
+    padding-left: .5rem;
+}
+/************END EMAIL-FORM****************/
+
+/************END LEFT SIDE****************/
+
+/************RIGHT SIDE******************/
+
+/************SIGN IN FORM****************/
+.form__box-float {
+    display: flex;
+    align-items: center;
+}
+.form__box--float {
+    margin-bottom: 0;
+    flex-basis: 70%;
+}
+.register_button--float {
+    flex-basis: 30%;
+}
+/************END SIGN IN FORM****************/
+
+/************RECOVER FORM****************/
+.form__box--buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.register_button--sibling {
+    flex-basis: 40%;
+    font-size: 1.2rem;
+}
+
+.register_button--done {
+    background: #bddb98;
+    @at-root &:hover {
+        background: darken($color: #bddb98, $amount: 10);
+    }
+}
+/************END RECOVER FORM****************/
+
+/************SUBSRIBE FORM*****************/
+.register_button--red {
+    background: #f44759;
+    @at-root &:hover {
+        background-color: darken($color: #f44759, $amount: 8deg);
+    }
+}
+/************END SUBSRIBE FORM*****************/
+
+/***************LOGO_BOTTOM*************/
+figure.logo_bottom {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.logo_bottom__img {
+    margin: 0 auto;
+    width: 50%;
+    opacity: .4;
+}
+/***************END LOGO_BOTTOM*************/
+/************END RIGHT SIDE******************/
+
+/************MEDIA QUERIES******************/
+@media (min-width: #{$sm}) {
+
+    .header {
+        @at-root &__logo {
+            width: 70%;
+        }
+    }
+
+    .section {
+        @at-root &__title {
+            font-size: 3rem;
+        }
+    }
+
+    .form {
+        @at-root .register_button {
+            font-size: 1.6rem;
+        }
+
+        @at-root &__input {
+            font-size: 1.6rem;
+            padding: .5rem;
+            padding-left: 3.8rem;
+        }
+
+        @at-root &__icon {
+            font-size: 1.4rem;
+            width: 25px;
+            height: 25px;
+            padding-right: .8rem;
+        }
+    }
+
+    .checkbox {
+        @at-root &__label {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@media (min-width: #{$md}) {
+
+    .header {
+        @at-root &__logo {
+            width: 60%;
+        }
+    }
+
+    .section {
+        width: 55%;
+    }
+}
+
+@media (min-width: #{$lg}){
+    .header {
+        @at-root &__logo {
+            width: 50%;
+        }
+    }
+
+    .main {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .left-side, .right-side {
+        width: 50%;
+        padding-bottom: 4rem;
+    }
+
+    .section {
+        width: 80%;
+    }    
+
+    .form-wrapper {
+        padding: 1.5rem;
+    }
+
+    .form {
+        padding: 1.5rem;
+    }
+
+    .logo_bottom {
+        margin-top: 1rem;
+        @at-root &__img {
+            width: 70%;
+        }
+    }
+}
+
+@media (min-width: #{$xl}) {
+    .header__logo-container {
+        max-width: 1200px;
+    }
+    .header__logo {
+        width: 30%;
+    }
+    .main {
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+    .section {
+        width: 65%;
+    }
+    .left-side, .right-side {
+        display: flex;
+    }
+    .left-side {
+        align-items: flex-end;
+        padding-right: 5rem;
+    }
+    .right-side {
+        align-items: flex-start;
+        padding-left: 5rem;
+    }
+    .logo_bottom__img {
+        width: 100%;
+    }
+    figure.logo_bottom {
+        width: 60%;
+        text-align: left;
+    }
+}
+/************END MEDIA QUERIES******************/
