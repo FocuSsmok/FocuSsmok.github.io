@@ -2,6 +2,8 @@ const gulp = require("gulp");
 const bs = require("browser-sync");
 const sass = require("gulp-sass");
 const tildeImporter = require("node-sass-tilde-importer");
+const autoprefixer = require("gulp-autoprefixer");
+const cleanCss = require("gulp-clean-css");
 
 gulp.task('sass', function() {
     return gulp.src('./src/scss/*.scss')
@@ -9,6 +11,11 @@ gulp.task('sass', function() {
         importer: tildeImporter,
         style: 'expanded'
     }))
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
+    .pipe(cleanCss({compatibility: 'ie8'}))
     .pipe(gulp.dest('./src/css'))
     .pipe(bs.stream());
 });
