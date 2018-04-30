@@ -93,18 +93,18 @@ a {
             background: darken($color: #93d02b, $amount: 10);
         }
     }
-    // @at-root &__input {
-    //     width: 100%;
-    //     padding: .3rem;
-    //     font-size: 1.2rem;
-    //     padding-left: 3rem;
-    //     border: 1px solid #dedede;
-    //     border-radius: .2rem;
-    //     color: #dedede;
-    //     @at-root &::-webkit-input-placeholder{
-    //         color: #dedede;
-    //     }
-    // }
+    @at-root &__input {
+        width: 100%;
+        padding: .3rem;
+        font-size: 1.2rem;
+        padding-left: 3rem;
+        border: 1px solid #dedede;
+        border-radius: .2rem;
+        color: #dedede;
+        @at-root &::-webkit-input-placeholder{
+            color: #dedede;
+        }
+    }
     @at-root &__icon {
         display: inline-block;
         height: 20px;
