@@ -16,6 +16,7 @@
     "gulp-clean-css": "^3.9.3",
     "gulp-imagemin": "^4.1.0",
     "gulp-sass": "^3.2.1",
-    "node-sass-tilde-importer": "^1.0.2"
+    "node-sass-tilde-importer": "^1.0.2",
+    "webpack-dev-server": "^3.1.3"
   }
 }

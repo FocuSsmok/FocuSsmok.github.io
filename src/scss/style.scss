@@ -93,18 +93,18 @@ a {
             background: darken($color: #93d02b, $amount: 10);
         }
     }
-    @at-root &__input {
-        width: 100%;
-        padding: .3rem;
-        font-size: 1.2rem;
-        padding-left: 3rem;
-        border: 1px solid #dedede;
-        border-radius: .2rem;
-        color: #dedede;
-        @at-root &::-webkit-input-placeholder{
-            color: #dedede;
-        }
-    }
+    // @at-root &__input {
+    //     width: 100%;
+    //     padding: .3rem;
+    //     font-size: 1.2rem;
+    //     padding-left: 3rem;
+    //     border: 1px solid #dedede;
+    //     border-radius: .2rem;
+    //     color: #dedede;
+    //     @at-root &::-webkit-input-placeholder{
+    //         color: #dedede;
+    //     }
+    // }
     @at-root &__icon {
         display: inline-block;
         height: 20px;
@@ -119,27 +119,27 @@ a {
         padding: 5px 5px 5px 0;
         border-right: 1px solid #dedede;
     }
-    @at-root select[selected] {
-        color: #93d02b;
-    }
-    @at-root &__option {
-        color: #dedede;
-        font-size: 1.4rem;
-    }
-    @at-root select,
-    select option {
-        color: #000000;
-    }
+    // @at-root select[selected] {
+    //     color: #93d02b;
+    // }
+    // @at-root &__option {
+    //     color: #dedede;
+    //     font-size: 1.4rem;
+    // }
+    // @at-root select,
+    // select option {
+    //     color: #000000;
+    // }
 
-    @at-root select:invalid,
-    select option[value=""] {
-        color: #dedede;
-    }
+    // @at-root select:invalid,
+    // select option[value=""] {
+    //     color: #dedede;
+    // }
 
-    /*Added for browser compatibility*/
-    @at-root [hidden] {
-        display: none;
-    }
+    // /*Added for browser compatibility*/
+    // @at-root [hidden] {
+    //     display: none;
+    // }
 
 
 }
