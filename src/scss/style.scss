@@ -123,9 +123,24 @@ a {
         color: #93d02b;
     }
     @at-root &__option {
-        // color: #dedede;
+        color: #dedede;
         font-size: 1.4rem;
     }
+    @at-root select,
+    select option {
+        color: #000000;
+    }
+
+    @at-root select:invalid,
+    select option[value=""] {
+        color: #dedede;
+    }
+
+    /*Added for browser compatibility*/
+    @at-root [hidden] {
+        display: none;
+    }
+
 
 }
 
