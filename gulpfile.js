@@ -24,7 +24,7 @@ gulp.task('sass', function() {
 gulp.task('browserSync', function() {
     bs.init({
         server: {
-            baseDir: './src'
+            baseDir: './'
         }
     });
 });
@@ -35,7 +35,7 @@ gulp.task('serve', ['sass'], function() {
         files: "./src/css/style.css"
     });
     gulp.watch(['./src/scss/*.scss'], ['sass']);
-    gulp.watch(['./src/*.html']).on("change", bs.reload);
+    gulp.watch(['./*.html']).on("change", bs.reload);
     gulp.watch(['./src/js/*.js']).on("change", bs.reload);
 });
 
