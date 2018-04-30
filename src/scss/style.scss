@@ -122,10 +122,13 @@ a {
     // @at-root select[selected] {
     //     color: #93d02b;
     // }
-    // @at-root &__option {
-    //     color: #dedede;
-    //     font-size: 1.4rem;
-    // }
+    @at-root &__select {
+        background: transparent;
+    }
+    @at-root &__option {
+        color: #dedede;
+        font-size: 1.4rem;
+    }
     // @at-root select,
     // select option {
     //     color: #000000;
