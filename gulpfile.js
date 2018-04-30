@@ -31,7 +31,7 @@ gulp.task('browserSync', function() {
 
 gulp.task('serve', ['sass'], function() {
     bs.init({
-        server: './src',
+        server: './',
         files: "./src/css/style.css"
     });
     gulp.watch(['./src/scss/*.scss'], ['sass']);

@@ -36,6 +36,8 @@ a {
     }
     @at-root &__logo {
         width: 80%;
+        max-width: 429px !important;
+        max-height: 111px !important;
     }
 }
 /************END HEADER***************/
@@ -239,6 +241,8 @@ figure.logo_bottom {
 .logo_bottom__img {
     margin: 0 auto;
     width: 50%;
+    max-width: 363px;
+    max-height: 151px;
     opacity: .4;
 }
 /***************END LOGO_BOTTOM*************/
@@ -249,7 +253,8 @@ figure.logo_bottom {
 
     .header {
         @at-root &__logo {
-            width: 70%;
+            width: 429px;
+            height: 111px;
         }
     }
 
@@ -283,25 +288,35 @@ figure.logo_bottom {
             font-size: 1.6rem;
         }
     }
+
+    .logo_bottom {
+        @at-root &__img {
+            width: 363px;
+            height: 151px;
+        }
+    }
 }
 
 @media (min-width: #{$md}) {
 
     .header {
         @at-root &__logo {
-            width: 60%;
+            width: 429px;
+            height: 111px;
         }
     }
 
     .section {
         width: 55%;
     }
+
 }
 
 @media (min-width: #{$lg}){
     .header {
         @at-root &__logo {
-            width: 50%;
+            width: 429px;
+            height: 111px;
         }
     }
 
@@ -329,9 +344,6 @@ figure.logo_bottom {
 
     .logo_bottom {
         margin-top: 1rem;
-        @at-root &__img {
-            width: 70%;
-        }
     }
 }
 
@@ -340,7 +352,8 @@ figure.logo_bottom {
         max-width: 1200px;
     }
     .header__logo {
-        width: 30%;
+        width: 429px;
+        height: 111px;
     }
     .main {
         margin: 0 auto;
@@ -359,9 +372,6 @@ figure.logo_bottom {
     .right-side {
         align-items: flex-start;
         padding-left: 5rem;
-    }
-    .logo_bottom__img {
-        width: 100%;
     }
     figure.logo_bottom {
         width: 60%;
