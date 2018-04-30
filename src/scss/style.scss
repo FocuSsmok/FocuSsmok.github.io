@@ -123,13 +123,11 @@ a {
         color: #93d02b;
     }
     @at-root &__option {
-        background-color: #93d02b;
         color: #dedede;
         font-size: 1.4rem;
     }
     @at-root select,
     select option {
-        background-color: #93d02b;
         color: #000000;
     }
 
